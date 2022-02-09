@@ -1,0 +1,22 @@
+/* Inspired by Vercel design */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f7f7f7;
+}
+
+.bg-primary {
+  background: #1F2937;
+}
+
+.bg-orange {
+  background: #FCA115;
+}
+
+
+
+
+
