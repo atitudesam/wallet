@@ -1,13 +1,15 @@
 import verifyToken from '../getInitialProps/verifyToken';
-
-import Layout from '../components/Layout/';
 import Register from '../components/Register';
+import Head from '../components/Layout/Head';
 
 const RegisterPage = () => {
   return (
-    <Layout title="Create account">
-      <Register></Register>
-    </Layout>
+    <>
+      <Head title="Register" />
+      <div className="has-text-centered">
+        <Register />
+      </div>
+    </>
   );
 };
 
@@ -16,3 +18,4 @@ RegisterPage.getInitialProps = function (ctx) {
 };
 
 export default RegisterPage;
+

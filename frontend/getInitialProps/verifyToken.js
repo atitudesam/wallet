@@ -11,9 +11,9 @@ export default function (ctx) {
   } else {
     const token = ctx.store.getState().authentication.token;
 
-    if (token && (ctx.pathname === '/login' || ctx.pathname === '/register')) {
+    if (token && (ctx.pathname === '/login' || ctx.pathname === '/register' || ctx.pathname === '/')) {
       setTimeout(function () {
-        Router.push('/');
+        Router.push('/dashboard');
       }, 0);
     }
   }

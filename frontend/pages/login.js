@@ -1,13 +1,15 @@
 import verifyToken from '../getInitialProps/verifyToken';
-
-import Layout from '../components/Layout/';
 import Login from '../components/Login';
+import Head from '../components/Layout/Head';
 
 const LoginPage = () => {
   return (
-    <Layout title="Sign In">
-      <Login />
-    </Layout>
+    <>
+      <Head title="Sign In" />
+      <div className="has-text-centered">
+        <Login />
+      </div>
+    </>
   );
 };
 

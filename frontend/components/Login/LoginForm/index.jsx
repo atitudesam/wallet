@@ -69,7 +69,7 @@ const LoginForm = () => {
         </div>
 
         <div className="text-sm mt-6">
-          Don't have an acccount? <Link href="/sign-up" className="font-bold text-indigo-600 hover:text-indigo-500">Register Now</Link>
+          Don't have an acccount? <Link href="/register" className="font-bold text-indigo-600 hover:text-indigo-500">Register Now</Link>
         </div>
       </form>
       

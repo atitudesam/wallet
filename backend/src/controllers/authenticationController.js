@@ -23,17 +23,24 @@ Authentication.login = (req, res, next) => {
 
 Authentication.register = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
-    if (!email || !password) {
+    const { name,email, password } = req.body;
+    if (!name) {
+      return res.status(500).json({
+        message: 'Name must be provided',
+      });
+    }
+    if (!name || !email || !password) {
       return res.status(500).json({
         message: 'Email and password must be provided',
       });
     }
+
     const user = await User.findOne({ email });
     if (user) {
       return res.status(422).json({ message: 'Email is already in use' });
     }
     const newUser = new User({
+      name,
       email,
       password,
     });

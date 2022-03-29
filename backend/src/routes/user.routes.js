@@ -7,5 +7,6 @@ const { requireAuth } = require('../middlewares/authentication');
 const { getName } = require('../controllers/userController');
 
 router.route('/user').get(requireAuth, getName);
+router.route('/settings').get(requireAuth, getName);
 
 module.exports = router;
